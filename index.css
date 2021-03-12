@@ -1,0 +1,179 @@
+/* Set CSS box model */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Utility classes */
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* Set base typography */
+body {
+    background-color: #fcfdfd;
+    color: #050707;
+    font-family:
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Helvetica,
+            Arial,
+            sans-serif,
+            "Apple Color Emoji",
+            "Segoe UI Emoji",
+            "Segoe UI Symbol";
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive Container */
+.container {
+    padding: 3rem 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+@media (min-width: 48rem) {
+    .container {
+        max-width: 46rem;  /* 48rem - 2rem of padding */
+    }
+}
+
+/* Page title */
+.page-title {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.page-img {
+    display: block;
+    max-width: 100%;
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Forms */
+.form-control {
+    margin-bottom: 0.5rem;
+}
+
+.form-control.hidden {
+    margin-bottom: -0.5rem;
+}
+
+.form-group {
+    border: none;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.125rem;
+}
+
+.dropdown {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-position: right .75rem center;
+    background-repeat: no-repeat;
+    background-size: 16px 12px;
+    border-radius: .125rem;
+    border: 1px solid #ced4da;
+    color: #212529;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: .375rem 2.25rem .375rem .75rem;
+    width: 100%;
+}
+
+.checkbox {
+    border-radius: 0.125rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+    margin-top: -0.125rem;
+    vertical-align: middle;
+    width: 1rem;
+}
+
+.button {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    background-color: #212529;
+    border-radius: .125rem;
+    border: 1px solid #212529;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: .375rem .75rem;
+    text-align: center;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    user-select: none;
+    vertical-align: middle;
+}
+
+/* Pokemon */
+.pokemon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 1.5rem;
+    width: 100%;
+}
+
+.pokemon {
+    border: 1px solid rgba(0,0,0,0.075);
+    border-radius: 0.125rem;
+    padding: 1rem;
+    padding-bottom: 2.25rem;
+    margin: 0.5rem;
+    text-align: center;
+    line-height: 1.1;
+    height: auto;
+    width: 20rem;
+}
+
+.pokemon-name {
+    font-weight: 500;
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+.pokemon-ability,
+.pokemon-type {
+    margin-top: 0;
+}

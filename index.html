@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Pokemon Team Builder</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container" id="root">
+        <h1 class="page-title">Pokemon Team Builder</h1>
+        <form id="pokemon-selector" class="form">
+            <fieldset class="form-group">
+                <div class="form-control">
+                    <label for="exclude-legendaries">
+                        <input id="exclude-legendaries" value="true" name="exclude-legendaries" type="checkbox" class="checkbox" />
+                        Exclude Legendaries?
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <div class="form-control">
+                    <label for="baby">
+                        <input
+                          id="baby"
+                          name="baby"
+                          type="checkbox"
+                          class="checkbox"
+                          value="true"
+                        />
+                        Baby Only?
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <div class="form-control">
+                    <label for="type-specialist">
+                        <input
+                            id="type-specialist"
+                            name="type-specialist"
+                            type="checkbox"
+                            class="checkbox"
+                            value="true"
+                            data-toggleVisibility="type-selection-container"
+                        />
+                        Type Specialist?
+                    </label>
+                </div>
+
+                <div id="type-selection-container" class="form-control hidden">
+                    <label for="type-selection" class="label visually-hidden">Type</label>
+                    <select id="type-selection" name="type-selection" class="dropdown">
+                        <option value="">---</option>
+                        <option value="dark">Dark</option>
+                        <option value="fire">Fire</option>
+                        <option value="water">Water</option>
+                    </select>
+                </div>
+            </fieldset>
+            <button id="form-submit" class="button" type="submit">Show me my team</button>
+        </form>
+        <div id="selected-pokemon" class="pokemon-grid"></div>
+        <img src="./pok__mon-twilight-wings-wooloo.png" alt="Wooloo" class="page-img" />
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
